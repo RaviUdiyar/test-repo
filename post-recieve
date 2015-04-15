@@ -1,0 +1,12 @@
+#!/bin/bash
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/master$ ]];
+    then
+        echo "Master ref received.  Deploying master branch to production..."
+        git --work-tree=~/Desktop/#CookiesLocalFiles/test-repo --git-dir=https://github.com/RaviUdiyar/test-repo.git checkout -f
+    else
+        echo "REF $ref was successfully recieved. Doing Nothing: only pulling master branch from remote"
+    fi
+done
+
