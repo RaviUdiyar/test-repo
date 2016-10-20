@@ -42,7 +42,7 @@ server '139.59.18.116', user: 'ravi', roles: %w{app db web}
 # Global options
 # --------------
 set :ssh_options, {
-  keys: %w(/home/ravi/.ssh/id_rsa),
+  keys: %w(/app/.ssh/id_rsa),
   forward_agent: false,
   auth_methods: %w(password publickey)
 }
