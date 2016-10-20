@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'test-repo'
-set :repo_url, 'https://gitlab.com/RaviUdiyar/pahadi-local-backend.git'
+set :repo_url, 'https://gitlab.com/RaviUdiyar/test-repo.git'
 
 set :rbenv_type , :system
 set :rbenv_ruby, '2.3.1'
