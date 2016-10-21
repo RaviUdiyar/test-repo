@@ -31,7 +31,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'capistrano'
 gem 'capistrano-rbenv'
 gem 'capistrano-rails'
-gem 'slackistrano'
 gem 'pg'
 
 group :development, :test do

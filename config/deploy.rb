@@ -13,11 +13,6 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :slackistrano, {
- channel: '#deployments',
- webhook: 'https://hooks.slack.com/services/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'
-}
-
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
 
