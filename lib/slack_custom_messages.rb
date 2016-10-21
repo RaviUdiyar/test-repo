@@ -1,11 +1,14 @@
 module Slackistrano
   class CustomMessaging < Messaging::Base
-    
+
     # Supress updating message.
     def payload_for_updating
-      payload = super
-      payload[:color] = "warning"
-      payload
+      {
+        :attachments => [{
+          :text    => super[:text],
+          :color   => "warning"
+        }]
+      }
     end
 
     # Supress reverting message.
@@ -45,9 +48,12 @@ module Slackistrano
     # Slightly tweaked failed message.
     # See https://api.slack.com/docs/message-formatting
     def payload_for_failed
-      payload = super
-      payload[:color] = "danger"
-      payload
+      {
+        :attachments => [{
+          :text    => super[:text],
+          :color   => "danger"
+        }]
+      }
     end
 
   end
