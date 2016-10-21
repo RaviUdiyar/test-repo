@@ -16,13 +16,13 @@ require "capistrano/deploy"
 #   https://github.com/capistrano/passenger
 #
 # require 'capistrano/rvm'
-require 'capistrano/rbenv'
+require_relative 'capistrano/rbenv'
 # require 'capistrano/chruby'
 # require 'capistrano/bundler'
-require 'capistrano/rails'
+require_relative 'capistrano/rails'
 # require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
-require 'slackistrano/capistrano'
+require_relative 'slackistrano/capistrano'
 require_relative 'lib/slack_custom_messages'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
